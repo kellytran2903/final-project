@@ -5,6 +5,7 @@ import com.core.drivers.DriverManager;
 import com.core.helpers.PropertiesHelper;
 import com.core.reports.AllureManager;
 import com.core.utils.LogUtils;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.Color;
@@ -22,7 +23,7 @@ import java.util.List;
 
 public class WebUI {
 
-    private static int TIMEOUT = Integer.parseInt(PropertiesHelper.getValue("EXPLICITE_WAIT"));
+    private static int TIMEOUT = Integer.parseInt(PropertiesHelper.getValue("EXPLICIT_WAIT"));
     private static int STEP_TIME = Integer.parseInt(PropertiesHelper.getValue("STEP_TIME"));
 
     // * Chờ cho đến khi element hiển thị trên giao diện và trả về element đó.
@@ -37,16 +38,27 @@ public class WebUI {
         }
     }
 
-    public static Boolean checkElementExist(By by) {
-        List<WebElement> webElementList = getWebElements(by);
-
-        if (webElementList.size() > 0) {
-            LogUtils.info("checkElementExist: " + true + "----" + by);
+    public static boolean verifyElementVisible(By by, int timeout) {
+        try {
+            WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(timeout));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(by));
             return true;
-        } else {
-            LogUtils.info("checkElementExist: " + false + "---" + by);
+        } catch (Exception e) {
+            // Không tìm thấy hoặc timeout -> Trả về false ngay lập tức
             return false;
         }
+    }
+
+    public static boolean isElementPresent(By by) {
+        List<WebElement> webElementList = getWebElements(by);
+        boolean present = !webElementList.isEmpty();
+        LogUtils.info("Element present=" + present + " | locator=" + by);
+        return present;
+    }
+
+    @Deprecated
+    public static boolean checkElementExist(By by) {
+        return isElementPresent(by);
     }
 
     public static void waitForElementClickable(By by) {
@@ -105,10 +117,15 @@ public class WebUI {
         }
     }
 
-    public static void openURL(String url) {
+    public static void openUrl(String url) {
         DriverManager.getDriver().get(url);
         sleep(STEP_TIME);
         LogUtils.info("Open URL: " + url);
+    }
+
+    @Deprecated
+    public static void openURL(String url) {
+        openUrl(url);
     }
 
     public static void clearText(By by) {
@@ -148,38 +165,120 @@ public class WebUI {
         LogUtils.info("Click on element " + by);
     }
 
-    public static String getBorderColor(By by){
+    public static String getBorderColor(By by) {
         return Color.fromString(DriverManager.getDriver().findElement(by).getCssValue("border-color")).asHex();
     }
 
-    public static void assertNotContain(String actual, String expected, String message){
+    public static void assertNotContain(String actual, String expected, String message) {
         waitForPageLoaded();
         LogUtils.info("Assert NOT contain: " + expected + " and Actual: " + actual);
         boolean check = actual.contains(expected);
         Assert.assertFalse(check, message);
     }
 
-    public static void assertContain(String actual, String expected, String message){
+    public static void assertContain(String actual, String expected, String message) {
         waitForPageLoaded();
         LogUtils.info("Assert contain: " + expected + " and Actual: " + actual);
         boolean check = actual.contains(expected);
         Assert.assertTrue(check, message);
     }
 
-    public static void assertEqual(String actual, String expected, String message){
-        waitForPageLoaded();
-        LogUtils.info("Assert equals: " + actual + " \uD83D\uDFF0 " + expected);
+    @Step("Assert equals")
+    public static void assertEquals(String actual, String expected, String message) {
+        LogUtils.info("Assert equals | actual=" + actual + " | expected=" + expected);
         Assert.assertEquals(actual, expected, message);
     }
 
-    public static void assertNotEqual(String actual, String expected, String message){
-        waitForPageLoaded();
+    @Deprecated
+    public static void assertEqual(String actual, String expected, String message) {
+        assertEquals(actual, expected, message);
+    }
+
+//    @Step("Assert equals: ")
+//    public static void assertEqual(int actual, int expected, String message){
+//        waitForPageLoaded();
+//        LogUtils.info("Assert equals: " + actual + " \uD83D\uDFF0 " + expected);
+//        Assert.assertEquals(actual, expected, message);
+//    }
+
+    public static void assertEquals(int actual, int expected, String message) {
+        LogUtils.info("Assert equals | " + message);
+        try {
+            Assert.assertEquals(actual, expected, message);
+            LogUtils.info("PASSED: " + message);
+            Allure.step("Verify Equals: " + message + " | Actual: " + actual + " | Expected: " + expected);
+        } catch (AssertionError e) {
+            LogUtils.error("FAILED: " + message);
+            AllureManager.saveFailureLog(message, String.valueOf(actual), String.valueOf(expected));
+            throw e;
+        }
+    }
+
+    @Deprecated
+    public static void assertEqual(int actual, int expected, String message) {
+        assertEquals(actual, expected, message);
+    }
+
+    @Step("Assert NOT equals: ")
+    public static void assertNotEqual(String actual, String expected, String message) {
+//        waitForPageLoaded();
         LogUtils.info("Assert not equals: " + actual + " #\uFE0F⃣ " + expected);
         Assert.assertNotEquals(actual, expected, message);
     }
 
+    //    @Step("Check True: {1}")
+    public static void assertTrue(boolean condition, String message) {
+        LogUtils.info("Assert TRUE | " + message);
+
+        try {
+            Assert.assertTrue(condition, message);
+            LogUtils.info("PASSED: " + message);
+        } catch (AssertionError e) {
+            LogUtils.error("FAILED: " + message);
+            AllureManager.saveFailureLog(message, "FALSE", "TRUE");
+            throw e; // Ném lỗi để TestNG đánh dấu Fail
+        }
+    }
+
+    public static void assertFalse(boolean condition, String message) {
+        LogUtils.info("Assert FALSE | " + message);
+
+        try {
+            Assert.assertFalse(condition, message);
+            LogUtils.info("PASSED: " + message);
+        } catch (AssertionError e) {
+            LogUtils.error("FAILED: " + message);
+            // Expected là FALSE, nhưng Actual lại ra TRUE nên mới lỗi
+            AllureManager.saveFailureLog(message, "TRUE", "FALSE");
+            throw e;
+        }
+    }
+
+    public static void assertNotNull(Object object, String message) {
+        LogUtils.info("Assert NOT NULL | " + message);
+
+        try {
+            Assert.assertNotNull(object, message);
+            LogUtils.info("PASSED: " + message);
+        } catch (AssertionError e) {
+            LogUtils.error("FAILED: " + message);
+            AllureManager.saveFailureLog(message, "NULL", "NOT NULL");
+            throw e;
+        }
+    }
+
     public static String getCurrentUrl() {
         return DriverManager.getDriver().getCurrentUrl();
+    }
+
+    public static boolean verifyUrlContains(String keyword) {
+        try {
+            WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10));
+            return wait.until(ExpectedConditions.urlContains(keyword));
+        } catch (TimeoutException e) {
+            LogUtils.error("URL does not contain keyword: " + keyword);
+            return false;
+        }
     }
 
     public static void scrollToElement(By by) {
@@ -197,19 +296,17 @@ public class WebUI {
     @Step("Upload file successfully: {1}")
     public static void uploadFileWithRobot_macOS(String filePath) throws AWTException, IOException {
         try {
-            // --- Log bước chuẩn bị ---
-            LogUtils.info("🔹 Đang thực hiện upload file (macOS)...");
-            LogUtils.info("Đường dẫn file: " + filePath);
+            LogUtils.info("Upload file (macOS). Path: " + filePath);
 
             // --- Click để mở hộp thoại Upload ---
 //            WebUI.clickElement(uploadButton);
-            LogUtils.info("✅ Đã click vào nút upload, chờ Finder mở...");
+            LogUtils.info("Clicked upload button. Waiting for Finder...");
             WebUI.sleep(2);
 
             // --- Copy file path vào clipboard ---
             StringSelection selection = new StringSelection(filePath);
             Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
-            LogUtils.info("📋 Đã copy đường dẫn file vào clipboard");
+            LogUtils.info("Copied file path to clipboard.");
 
             // --- Khởi tạo Robot ---
             Robot rb = new Robot();
@@ -231,7 +328,7 @@ public class WebUI {
             rb.keyRelease(KeyEvent.VK_SHIFT);
             rb.keyRelease(KeyEvent.VK_META);
             rb.delay(500);
-            LogUtils.info("📁 Đã mở 'Go to Folder' (Cmd+Shift+G)");
+            LogUtils.info("Opened 'Go to Folder' (Cmd+Shift+G).");
 
             // --- Dán đường dẫn ---
             rb.delay(500);
@@ -240,26 +337,26 @@ public class WebUI {
             rb.keyRelease(KeyEvent.VK_V);
             rb.keyRelease(KeyEvent.VK_META);
             rb.delay(500);
-            LogUtils.info("📎 Đã dán đường dẫn vào hộp thoại");
+            LogUtils.info("Pasted path to dialog.");
 
             // --- Nhấn Enter để truy cập đường dẫn ---
             rb.keyPress(KeyEvent.VK_ENTER);
             rb.keyRelease(KeyEvent.VK_ENTER);
             rb.delay(500);
-            LogUtils.info("✅ Đã xác nhận đường dẫn");
+            LogUtils.info("Confirmed path.");
 
             // --- Nhấn Enter lần 2 để chọn file ---
             rb.keyPress(KeyEvent.VK_ENTER);
             rb.keyRelease(KeyEvent.VK_ENTER);
             rb.delay(500);
-            LogUtils.info("📤 Đã chọn file để upload");
+            LogUtils.info("Selected file for upload.");
 
             rb.keyPress(KeyEvent.VK_ENTER);
             rb.keyRelease(KeyEvent.VK_ENTER);
             rb.delay(500);
 
         } catch (Exception e) {
-            LogUtils.error("❌ Lỗi khi upload file (macOS): " + e.getMessage());
+            LogUtils.error("Upload file (macOS) failed: " + e.getMessage());
         }
         AllureManager.saveTextLog("==> File path: " + filePath);
     }

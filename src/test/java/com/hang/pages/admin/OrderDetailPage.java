@@ -14,7 +14,7 @@ public class OrderDetailPage extends BasePage {
     private By productPriceAdmin = By.xpath("//tbody//tr//td[6]");
     private By productTotalPriceAdmin = By.xpath("//td[normalize-space()='Total :']//following-sibling::td");
 
-    public void openOderDetailPage(){
+    public void openOrderDetailPage() {
         WebUI.waitForPageLoaded();
         WebUI.clickElement(firstViewButton);
         WebUI.waitForPageLoaded();

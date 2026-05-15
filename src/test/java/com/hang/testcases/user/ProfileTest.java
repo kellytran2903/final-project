@@ -30,6 +30,9 @@ public class ProfileTest extends BaseTest {
         loginPage = new LoginPage();
         dashboardPage = loginPage.loginCMS();
         profilePage = dashboardPage.clickManageProfile();
+//        if (profilePage == null) {
+//            throw new RuntimeException("LỖI: Hàm clickManageProfile() trả về null. Có thể do chưa Login được hoặc không tìm thấy nút Profile!");
+//        }
     }
 
     @Story("Check elements display")
@@ -44,15 +47,15 @@ public class ProfileTest extends BaseTest {
         WebUI.waitForPageLoaded();
 
         profilePage.updatePhotoProfile();
-        String filePath = SystemHelper.getCurrentDir() + "src/test/resources/datatest/boss1.jpg";
+        String filePath = SystemHelper.getCurrentDir() + "src/test/resources/testdata/boss1.jpg";
 
         // Gọi hàm upload
         WebUI.uploadFileWithRobot_macOS(filePath);
         profilePage.selectAndAddPhoto();
 
         By fileNameAfterUpload = By.xpath("//span[@class='text-truncate title'][1]");
-        Assert.assertTrue(WebUI.checkElementExist(fileNameAfterUpload), "❌ Cannot upload file");
-        Assert.assertEquals(WebUI.getElementText(fileNameAfterUpload), "boss1", "Tên file không khớp sau upload");
+        WebUI.assertTrue(WebUI.isElementPresent(fileNameAfterUpload), "Cannot upload file.");
+        WebUI.assertEquals(WebUI.getElementText(fileNameAfterUpload), "boss1", "File name does not match after upload.");
     }
 
     //Create new Address area trong Profile
@@ -123,10 +126,10 @@ public class ProfileTest extends BaseTest {
     public void updateDataByDataProvider(String name, String phoneNumber) {
         profilePage.updateBasicInfo(name, phoneNumber);
 
-        Assert.assertTrue(profilePage.getSuccessMessage().contains("Your Profile has been updated successfully!"), "❌Flash message success không đúng");
+        WebUI.assertTrue(profilePage.getSuccessMessage().contains("Your Profile has been updated successfully!"), "❌Flash message success không đúng");
         WebUI.waitForPageLoaded();
 
-        Assert.assertEquals(profilePage.getNameValue(), name, "❌Name chưa được update");
-        Assert.assertEquals(profilePage.getPhoneValue(), phoneNumber, "❌Phone chưa được update");
+        WebUI.assertEquals(profilePage.getNameValue(), name, "Name was not updated.");
+        WebUI.assertEquals(profilePage.getPhoneValue(), phoneNumber, "Phone was not updated.");
     }
 }

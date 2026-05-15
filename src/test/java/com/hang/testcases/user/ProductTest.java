@@ -30,7 +30,7 @@ public class ProductTest extends BaseTest {
         String[] actualData = productPage.getProductDetailInfo();
 
         String actualName = actualData[0];
-        Assert.assertEquals(actualName, expectedName, "❌Product title is not correct");
+        WebUI.assertEquals(actualName, expectedName, "Product title is not correct.");
     }
 
     // Cào data, lưu vào file excel
@@ -50,9 +50,9 @@ public class ProductTest extends BaseTest {
         String actualSolbBy = actualProductData[3];
         String actualDesc = actualProductData[4];
 
-        Assert.assertNotNull(actualProductData[0], "❌Không lấy được dữ liệu");
+        WebUI.assertNotNull(actualProductData[0], "Kiểm tra mảng dữ liệu sản phẩm trả về không bị Null");
 
         boolean saved = productPage.setDataProductIntoExcel(actualName, actualAvailable, actualOriginalPrice, actualSolbBy, actualDesc, 1);
-        Assert.assertTrue(saved, "❌Không lưu được dữ liệu vào Excel");
+        WebUI.assertTrue(saved, "Kiểm tra dữ liệu đã lưu thành công vào Excel");
     }
 }

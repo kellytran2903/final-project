@@ -1,5 +1,6 @@
 package com.core.helpers;
 
+import com.core.utils.LogUtils;
 import io.qameta.allure.Step;
 
 import java.io.File;
@@ -60,7 +61,7 @@ public class PropertiesHelper {
             // Lấy giá trị từ file đã Set
             value = properties.getProperty(key);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            LogUtils.error("Failed to read property. Key=" + key + " | error=" + e.getMessage());
         }
         return value;
     }
@@ -73,12 +74,12 @@ public class PropertiesHelper {
             }
             //Ghi vào cùng file Prop với file lấy ra
             out = new FileOutputStream(linkFile);
-            System.out.println(linkFile);
+            LogUtils.info("Write properties file: " + linkFile);
             properties.setProperty(key, keyValue);
             properties.store(out, null);
             out.close();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            LogUtils.error("Failed to write property. Key=" + key + " | error=" + e.getMessage());
         }
     }
 
@@ -90,12 +91,12 @@ public class PropertiesHelper {
             }
             //Ghi vào cùng file Prop với file lấy ra
             out = new FileOutputStream(SystemHelper.getCurrentDir() +  filePath);
-            System.out.println(SystemHelper.getCurrentDir() +  filePath);
+            LogUtils.info("Write properties file: " + SystemHelper.getCurrentDir() + filePath);
             properties.setProperty(key, keyValue);
             properties.store(out, null);
             out.close();
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            LogUtils.error("Failed to write property. Key=" + key + " | path=" + filePath + " | error=" + e.getMessage());
         }
     }
 
@@ -111,7 +112,7 @@ public class PropertiesHelper {
             tempProp.load(fileIn);
             value = tempProp.getProperty(key);
         } catch (Exception e) {
-            System.out.println("Không đọc được file data: " + fullPath);
+            LogUtils.error("Failed to read data properties file: " + fullPath);
         }
         return value;
     }

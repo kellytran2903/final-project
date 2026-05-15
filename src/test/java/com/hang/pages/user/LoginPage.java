@@ -2,7 +2,6 @@ package com.hang.pages.user;
 
 import com.core.helpers.PropertiesHelper;
 import com.core.keywords.WebUI;
-import com.core.utils.LogUtils;
 import com.hang.common.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -22,9 +21,9 @@ public class LoginPage extends BasePage {
 
     @Step("Open Login Page User")
     public void openLoginPageUser() {
-        WebUI.openURL(PropertiesHelper.getValue("url_user"));
+        WebUI.openUrl(PropertiesHelper.getValue("user_url"));
         WebUI.waitForPageLoaded();
-        if (WebUI.checkElementExist(buttonRemovePopup)) {
+        if (WebUI.verifyElementVisible(buttonRemovePopup, 2)) {
             WebUI.clickElement(buttonRemovePopup);
         }
     }
@@ -50,6 +49,7 @@ public class LoginPage extends BasePage {
 
     @Step("Login with Email: {0} and Password: {1}")
     public void login(String email, String password) {
+        WebUI.waitForElementVisible(inputEmail);
         setEmail(email);
         setPassword(password);
         clickLoginButton();
@@ -63,14 +63,14 @@ public class LoginPage extends BasePage {
         return WebUI.getElementText(errorMessage1);
     }
 
-    @Step("Get Allert error message")
+    @Step("Get Alert error message")
     public String getErrorMessage() {
         WebUI.waitForElementVisible(errorMessage2);
         return WebUI.getElementText(errorMessage2);
     }
 
-    @Step("Verify Allert error message correctly")
-    public boolean isAllertErrorDisplayed() {
+    @Step("Verify Alert error message correctly")
+    public boolean isAlertErrorDisplayed() {
         return WebUI.isElementDisplayed(errorMessage2);
     }
 
@@ -80,12 +80,16 @@ public class LoginPage extends BasePage {
     }
 
     @Step("Get Border color of Password input")
-    public String getPasswordBoderColor() {
+    public String getPasswordBorderColor() {
         return WebUI.getBorderColor(inputPassword);
     }
 
+//    public boolean isDashboardPageLoaded() {
+//        return WebUI.getCurrentUrl().contains("dashboard");
+//    }
+
     public boolean isDashboardPageLoaded() {
-        return WebUI.getCurrentUrl().contains("dashboard");
+        return WebUI.verifyUrlContains("dashboard");
     }
 
     public boolean isAtLoginPage() {
@@ -93,7 +97,7 @@ public class LoginPage extends BasePage {
     }
 
     public DashboardPage loginCMS() {
-        WebUI.openURL(PropertiesHelper.getValue("url_user"));
+        WebUI.openUrl(PropertiesHelper.getValue("user_url"));
         WebUI.waitForPageLoaded();
         WebUI.clickElement(buttonRemovePopup);
         WebUI.clearText(inputEmail);

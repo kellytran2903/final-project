@@ -16,10 +16,10 @@ public class LoginPageAdmin{
 
     @Step("Login Admin")
     public DashboardPage loginAdmin(){
-        WebUI.openURL(PropertiesHelper.getValue("URL_ADMIN"));
+        WebUI.openUrl(PropertiesHelper.getValue("admin_url"));
         WebUI.waitForPageLoaded();
-        WebUI.setText(inputEmail, PropertiesHelper.getValue("ADMIN_EMAIL"));
-        WebUI.setText(inputPassword, PropertiesHelper.getValue("ADMIN_PASSWORD"));
+        WebUI.setText(inputEmail, PropertiesHelper.getValue("admin_email"));
+        WebUI.setText(inputPassword, PropertiesHelper.getValue("admin_password"));
         WebUI.clickElement(buttonLogin);
         WebUI.waitForPageLoaded();
 
@@ -28,7 +28,7 @@ public class LoginPageAdmin{
 
     public void verifyLoginFail(){
         WebUI.waitForPageLoaded();
-        Assert.assertTrue(WebUI.checkElementExist(errorMessage), "Error message is not displayed");
+        Assert.assertTrue(WebUI.isElementPresent(errorMessage), "Error message is not displayed");
         Assert.assertEquals(WebUI.getElementText(errorMessage), "Invalid login credentials", "Content of error message is not match.");
     }
 }

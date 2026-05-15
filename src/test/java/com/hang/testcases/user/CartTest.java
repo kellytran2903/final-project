@@ -87,7 +87,7 @@ public class CartTest extends BaseTest {
 
         //Kiểm tra lại xem đủ sản phẩm chưa
         for (String productName : productList) {
-            Assert.assertTrue(cartPage.checkProductInCart(productName), "❌Sản phẩm '" + productName + "' không tìm thấy trong giỏ hàng");
+            WebUI.assertTrue(cartPage.checkProductInCart(productName), "❌Sản phẩm '" + productName + "' không tìm thấy trong giỏ hàng");
         }
     }
 
@@ -121,6 +121,6 @@ public class CartTest extends BaseTest {
 
         int afterBadge = cartPage.getCartTotalBadge();
         int expectedBadge = beforeBadge + productList.length;
-        Assert.assertEquals(afterBadge, expectedBadge, "❌ Badge is displayed incorrectly");
+        WebUI.assertEquals(afterBadge, expectedBadge, "Cart badge is displayed incorrectly.");
     }
 }

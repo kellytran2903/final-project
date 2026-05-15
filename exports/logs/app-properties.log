@@ -1,0 +1,863 @@
+[INFO] 07-01-2026 13:44:15 [main] LogUtils - Setup môi trường onStart: Wed Jan 07 13:44:10 JST 2026
+[INFO] 07-01-2026 13:44:15 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 07-01-2026 13:44:18 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 07-01-2026 13:44:20 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 07-01-2026 13:44:21 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 07-01-2026 13:44:21 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 07-01-2026 13:44:26 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 07-01-2026 13:44:28 [main] LogUtils - Set text kellytestCMS23@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 07-01-2026 13:44:28 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 07-01-2026 13:44:29 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 07-01-2026 13:44:30 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[ERROR] 07-01-2026 13:44:41 [main] LogUtils - URL không chứa từ khóa: dashboard
+[INFO] 07-01-2026 13:44:41 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[ERROR] 07-01-2026 13:44:41 [main] LogUtils -    ❌ FAILED: Lỗi: Không tìm thấy trang Dashboard sau khi đăng nhập.
+[ERROR] 07-01-2026 13:44:41 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 07-01-2026 13:44:41 [main] LogUtils - ==> Status: 2
+[ERROR] 07-01-2026 13:44:41 [main] LogUtils - java.lang.AssertionError: Lỗi: Không tìm thấy trang Dashboard sau khi đăng nhập. expected [true] but found [false]
+[INFO] 07-01-2026 13:44:41 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 07-01-2026 13:44:41 [main] LogUtils - Kết thúc bộ test: Wed Jan 07 13:44:41 JST 2026
+[INFO] 07-01-2026 13:44:41 [main] LogUtils - Test total: 1
+[INFO] 07-01-2026 13:44:41 [main] LogUtils - Test PASSED total: 0
+[INFO] 07-01-2026 13:44:41 [main] LogUtils - Test FAILED total: 1
+[INFO] 07-01-2026 13:44:41 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 07-01-2026 13:59:36 [main] LogUtils - Setup môi trường onStart: Wed Jan 07 13:59:31 JST 2026
+[INFO] 07-01-2026 13:59:36 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 07-01-2026 13:59:38 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 07-01-2026 13:59:40 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 07-01-2026 13:59:41 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 07-01-2026 13:59:41 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 07-01-2026 13:59:47 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 07-01-2026 13:59:48 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS23@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 07-01-2026 13:59:48 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 07-01-2026 13:59:49 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 07-01-2026 13:59:51 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[ERROR] 07-01-2026 14:00:01 [TestNG-test=Login Test with Chrome-1] LogUtils - URL không chứa từ khóa: dashboard
+[INFO] 07-01-2026 14:00:01 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[ERROR] 07-01-2026 14:00:01 [TestNG-test=Login Test with Chrome-1] LogUtils -    ❌ FAILED: Lỗi: Không tìm thấy trang Dashboard sau khi đăng nhập.
+[ERROR] 07-01-2026 14:00:01 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 07-01-2026 14:00:01 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Status: 2
+[ERROR] 07-01-2026 14:00:01 [TestNG-test=Login Test with Chrome-1] LogUtils - java.lang.AssertionError: Lỗi: Không tìm thấy trang Dashboard sau khi đăng nhập. expected [true] but found [false]
+[INFO] 07-01-2026 14:00:01 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 07-01-2026 14:00:01 [main] LogUtils - Kết thúc bộ test: Wed Jan 07 14:00:01 JST 2026
+[INFO] 07-01-2026 14:00:01 [main] LogUtils - Test total: 1
+[INFO] 07-01-2026 14:00:01 [main] LogUtils - Test PASSED total: 0
+[INFO] 07-01-2026 14:00:01 [main] LogUtils - Test FAILED total: 1
+[INFO] 07-01-2026 14:00:01 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 07-01-2026 14:00:01 [main] LogUtils - Setup môi trường onStart: Wed Jan 07 14:00:01 JST 2026
+[INFO] 07-01-2026 14:00:01 [TestNG-test=Login Test with Safari-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 07-01-2026 14:00:02 [TestNG-test=Login Test with Safari-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 07-01-2026 14:00:04 [TestNG-test=Login Test with Safari-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 07-01-2026 14:00:05 [TestNG-test=Login Test with Safari-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 07-01-2026 14:00:05 [TestNG-test=Login Test with Safari-1] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 07-01-2026 14:00:10 [TestNG-test=Login Test with Safari-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 07-01-2026 14:00:12 [TestNG-test=Login Test with Safari-1] LogUtils - Set text kellytestCMS23@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 07-01-2026 14:00:12 [TestNG-test=Login Test with Safari-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 07-01-2026 14:00:13 [TestNG-test=Login Test with Safari-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 07-01-2026 14:00:15 [TestNG-test=Login Test with Safari-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[ERROR] 07-01-2026 14:00:25 [TestNG-test=Login Test with Safari-1] LogUtils - URL không chứa từ khóa: dashboard
+[INFO] 07-01-2026 14:00:25 [TestNG-test=Login Test with Safari-1] LogUtils - 🔍 Checking condition is TRUE: 
+[ERROR] 07-01-2026 14:00:25 [TestNG-test=Login Test with Safari-1] LogUtils -    ❌ FAILED: Lỗi: Không tìm thấy trang Dashboard sau khi đăng nhập.
+[ERROR] 07-01-2026 14:00:25 [TestNG-test=Login Test with Safari-1] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 07-01-2026 14:00:25 [TestNG-test=Login Test with Safari-1] LogUtils - ==> Status: 2
+[ERROR] 07-01-2026 14:00:25 [TestNG-test=Login Test with Safari-1] LogUtils - java.lang.AssertionError: Lỗi: Không tìm thấy trang Dashboard sau khi đăng nhập. expected [true] but found [false]
+[INFO] 07-01-2026 14:00:25 [TestNG-test=Login Test with Safari-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 07-01-2026 14:00:25 [main] LogUtils - Kết thúc bộ test: Wed Jan 07 14:00:25 JST 2026
+[INFO] 07-01-2026 14:00:25 [main] LogUtils - Test total: 2
+[INFO] 07-01-2026 14:00:25 [main] LogUtils - Test PASSED total: 0
+[INFO] 07-01-2026 14:00:25 [main] LogUtils - Test FAILED total: 2
+[INFO] 07-01-2026 14:00:25 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 22-01-2026 19:00:55 [main] LogUtils - Setup môi trường onStart: Thu Jan 22 19:00:50 JST 2026
+[INFO] 22-01-2026 19:00:55 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 22-01-2026 19:00:59 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 22-01-2026 19:01:01 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 22-01-2026 19:01:03 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 22-01-2026 19:01:03 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 22-01-2026 19:01:08 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 22-01-2026 19:01:09 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 22-01-2026 19:01:09 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 22-01-2026 19:01:10 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 22-01-2026 19:01:14 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 22-01-2026 19:01:14 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 22-01-2026 19:01:14 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 22-01-2026 19:01:14 [main] LogUtils - Đây là test case PASSED: loginWithValidEmailAndPassword
+[INFO] 22-01-2026 19:01:15 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 22-01-2026 19:01:15 [main] LogUtils - Kết thúc bộ test: Thu Jan 22 19:01:15 JST 2026
+[INFO] 22-01-2026 19:01:15 [main] LogUtils - Test total: 1
+[INFO] 22-01-2026 19:01:15 [main] LogUtils - Test PASSED total: 1
+[INFO] 22-01-2026 19:01:15 [main] LogUtils - Test FAILED total: 0
+[INFO] 22-01-2026 19:01:15 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 23-01-2026 18:56:43 [main] LogUtils - Setup môi trường onStart: Fri Jan 23 18:56:37 JST 2026
+[INFO] 23-01-2026 18:56:43 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 23-01-2026 18:56:49 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 23-01-2026 18:56:52 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 23-01-2026 18:56:53 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 23-01-2026 18:56:53 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 23-01-2026 18:56:58 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:56:59 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:56:59 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:00 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:02 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 23-01-2026 18:57:02 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 23-01-2026 18:57:02 [TestNG-test=Login Test with Chrome-1] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 23-01-2026 18:57:02 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithValidEmailAndPassword
+[INFO] 23-01-2026 18:57:03 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 23-01-2026 18:57:03 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 23-01-2026 18:57:03 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 23-01-2026 18:57:06 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 23-01-2026 18:57:07 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 23-01-2026 18:57:07 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithInvalidPassword
+[INFO] 23-01-2026 18:57:12 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:57:14 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:57:14 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:15 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:17 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 23-01-2026 18:57:17 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[ERROR] 23-01-2026 18:57:17 [TestNG-test=Login Test with Chrome-1] LogUtils -    ❌ FAILED: Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login).
+[ERROR] 23-01-2026 18:57:17 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case FAILED: loginWithInvalidPassword
+[ERROR] 23-01-2026 18:57:17 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Status: 2
+[ERROR] 23-01-2026 18:57:17 [TestNG-test=Login Test with Chrome-1] LogUtils - java.lang.AssertionError: Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login). expected [true] but found [false]
+[INFO] 23-01-2026 18:57:17 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 23-01-2026 18:57:17 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 23-01-2026 18:57:18 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 23-01-2026 18:57:21 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 23-01-2026 18:57:22 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 23-01-2026 18:57:22 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithInvalidEmail
+[INFO] 23-01-2026 18:57:27 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:57:28 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text customer123sai@example.com on element By.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:57:28 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:29 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:31 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 23-01-2026 18:57:31 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 23-01-2026 18:57:31 [TestNG-test=Login Test with Chrome-1] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 23-01-2026 18:57:31 [TestNG-test=Login Test with Chrome-1] LogUtils - Get text of element By.xpath: //div[@role='alert']
+[INFO] 23-01-2026 18:57:31 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Text: Invalid login credentials
+[INFO] 23-01-2026 18:57:31 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert equals: Invalid login credentials 🟰 Invalid login credentials
+[INFO] 23-01-2026 18:57:31 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithInvalidEmail
+[INFO] 23-01-2026 18:57:32 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 23-01-2026 18:57:32 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 23-01-2026 18:57:32 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 23-01-2026 18:57:35 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 23-01-2026 18:57:36 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 23-01-2026 18:57:36 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithEmailNull
+[INFO] 23-01-2026 18:57:41 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:57:42 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text  on element By.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:57:42 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:44 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 23-01-2026 18:57:45 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 23-01-2026 18:57:45 [TestNG-test=Login Test with Chrome-1] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 23-01-2026 18:57:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Get text of element By.xpath: //strong[contains(text(),'The email field is required when phone is not pres')]
+[INFO] 23-01-2026 18:57:45 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Text: The email field is required when phone is not present.
+[INFO] 23-01-2026 18:57:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert equals: The email field is required when phone is not present. 🟰 The email field is required when phone is not present.
+[INFO] 23-01-2026 18:57:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithEmailNull
+[INFO] 23-01-2026 18:57:46 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 23-01-2026 18:57:46 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 23-01-2026 18:57:46 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 23-01-2026 18:57:48 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 23-01-2026 18:57:50 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 23-01-2026 18:57:50 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithPasswordNull
+[INFO] 23-01-2026 18:57:55 [TestNG-test=Login Test with Chrome-1] LogUtils - Border color before clicking: #e2e5ec
+[INFO] 23-01-2026 18:57:55 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:57:56 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 23-01-2026 18:57:56 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:57 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text  on element By.xpath: //input[@id='password']
+[INFO] 23-01-2026 18:57:59 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 23-01-2026 18:57:59 [TestNG-test=Login Test with Chrome-1] LogUtils - Border color after clicking: #dc3545
+[INFO] 23-01-2026 18:57:59 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 23-01-2026 18:57:59 [TestNG-test=Login Test with Chrome-1] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 23-01-2026 18:57:59 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert not equals: #dc3545 #️⃣ #e2e5ec
+[INFO] 23-01-2026 18:57:59 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithPasswordNull
+[INFO] 23-01-2026 18:57:59 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 23-01-2026 18:57:59 [main] LogUtils - Kết thúc bộ test: Fri Jan 23 18:57:59 JST 2026
+[INFO] 23-01-2026 18:57:59 [main] LogUtils - Test total: 5
+[INFO] 23-01-2026 18:57:59 [main] LogUtils - Test PASSED total: 4
+[INFO] 23-01-2026 18:57:59 [main] LogUtils - Test FAILED total: 1
+[INFO] 23-01-2026 18:57:59 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 26-01-2026 16:08:35 [main] LogUtils - Setup môi trường onStart: Mon Jan 26 16:08:30 JST 2026
+[INFO] 26-01-2026 16:08:35 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 26-01-2026 16:08:40 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 26-01-2026 16:08:44 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 26-01-2026 16:08:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 26-01-2026 16:08:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 26-01-2026 16:08:50 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:08:52 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:08:52 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:08:53 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:08:55 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 26-01-2026 16:08:55 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 26-01-2026 16:08:55 [TestNG-test=Login Test with Chrome-1] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 26-01-2026 16:08:55 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithValidEmailAndPassword
+[INFO] 26-01-2026 16:08:57 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 26-01-2026 16:08:57 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 26-01-2026 16:08:58 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 26-01-2026 16:09:00 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 26-01-2026 16:09:01 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 26-01-2026 16:09:01 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithInvalidPassword
+[INFO] 26-01-2026 16:09:06 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:09:08 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:09:08 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:09:09 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:09:10 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 26-01-2026 16:09:12 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[ERROR] 26-01-2026 16:09:12 [TestNG-test=Login Test with Chrome-1] LogUtils -    ❌ FAILED: Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login).
+[ERROR] 26-01-2026 16:09:12 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case FAILED: loginWithInvalidPassword
+[ERROR] 26-01-2026 16:09:12 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Status: 2
+[ERROR] 26-01-2026 16:09:12 [TestNG-test=Login Test with Chrome-1] LogUtils - java.lang.AssertionError: Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login). expected [true] but found [false]
+[INFO] 26-01-2026 16:09:12 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 26-01-2026 16:09:12 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 26-01-2026 16:09:13 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 26-01-2026 16:09:15 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 26-01-2026 16:09:16 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 26-01-2026 16:09:16 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithInvalidEmail
+[INFO] 26-01-2026 16:09:21 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:09:22 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text customer123sai@example.com on element By.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:09:22 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:09:23 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:09:26 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 26-01-2026 16:09:26 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 26-01-2026 16:09:26 [TestNG-test=Login Test with Chrome-1] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 26-01-2026 16:09:26 [TestNG-test=Login Test with Chrome-1] LogUtils - Get text of element By.xpath: //div[@role='alert']
+[INFO] 26-01-2026 16:09:26 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Text: Invalid login credentials
+[INFO] 26-01-2026 16:09:26 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert equals: Invalid login credentials 🟰 Invalid login credentials
+[INFO] 26-01-2026 16:09:26 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithInvalidEmail
+[INFO] 26-01-2026 16:09:26 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 26-01-2026 16:09:26 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 26-01-2026 16:09:27 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 26-01-2026 16:09:29 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 26-01-2026 16:09:30 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 26-01-2026 16:09:30 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithEmailNull
+[INFO] 26-01-2026 16:09:35 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:09:36 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text  on element By.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:09:36 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:09:38 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:09:39 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 26-01-2026 16:09:39 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 26-01-2026 16:09:39 [TestNG-test=Login Test with Chrome-1] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 26-01-2026 16:09:39 [TestNG-test=Login Test with Chrome-1] LogUtils - Get text of element By.xpath: //strong[contains(text(),'The email field is required when phone is not pres')]
+[INFO] 26-01-2026 16:09:39 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Text: The email field is required when phone is not present.
+[INFO] 26-01-2026 16:09:39 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert equals: The email field is required when phone is not present. 🟰 The email field is required when phone is not present.
+[INFO] 26-01-2026 16:09:39 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithEmailNull
+[INFO] 26-01-2026 16:09:39 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 26-01-2026 16:09:39 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 26-01-2026 16:09:40 [TestNG-test=Login Test with Chrome-1] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 26-01-2026 16:09:44 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 26-01-2026 16:09:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 26-01-2026 16:09:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithPasswordNull
+[INFO] 26-01-2026 16:09:50 [TestNG-test=Login Test with Chrome-1] LogUtils - Border color before clicking: #e2e5ec
+[INFO] 26-01-2026 16:09:50 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:09:51 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:09:51 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:09:52 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text  on element By.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:09:54 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 26-01-2026 16:09:54 [TestNG-test=Login Test with Chrome-1] LogUtils - Border color after clicking: #dc3545
+[INFO] 26-01-2026 16:09:54 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 26-01-2026 16:09:54 [TestNG-test=Login Test with Chrome-1] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 26-01-2026 16:09:54 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert not equals: #dc3545 #️⃣ #e2e5ec
+[INFO] 26-01-2026 16:09:54 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithPasswordNull
+[INFO] 26-01-2026 16:09:54 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 26-01-2026 16:09:54 [main] LogUtils - Kết thúc bộ test: Mon Jan 26 16:09:54 JST 2026
+[INFO] 26-01-2026 16:09:54 [main] LogUtils - Test total: 5
+[INFO] 26-01-2026 16:09:54 [main] LogUtils - Test PASSED total: 4
+[INFO] 26-01-2026 16:09:54 [main] LogUtils - Test FAILED total: 1
+[INFO] 26-01-2026 16:09:54 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 26-01-2026 16:33:09 [main] LogUtils - Setup môi trường onStart: Mon Jan 26 16:33:03 JST 2026
+[INFO] 26-01-2026 16:33:09 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 26-01-2026 16:33:10 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 26-01-2026 16:33:15 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 26-01-2026 16:33:16 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 26-01-2026 16:33:16 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 26-01-2026 16:33:21 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:33:22 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 26-01-2026 16:33:22 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:33:23 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 26-01-2026 16:33:25 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 26-01-2026 16:33:25 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 26-01-2026 16:33:25 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 26-01-2026 16:33:25 [main] LogUtils - Đây là test case PASSED: loginWithValidEmailAndPassword
+[INFO] 26-01-2026 16:33:27 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 26-01-2026 16:33:27 [main] LogUtils - Kết thúc bộ test: Mon Jan 26 16:33:27 JST 2026
+[INFO] 26-01-2026 16:33:27 [main] LogUtils - Test total: 1
+[INFO] 26-01-2026 16:33:27 [main] LogUtils - Test PASSED total: 1
+[INFO] 26-01-2026 16:33:27 [main] LogUtils - Test FAILED total: 0
+[INFO] 26-01-2026 16:33:27 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 27-01-2026 17:29:48 [main] LogUtils - Setup môi trường onStart: Tue Jan 27 17:29:42 JST 2026
+[INFO] 27-01-2026 17:29:48 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 27-01-2026 17:29:57 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 27-01-2026 17:29:59 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 27-01-2026 17:30:00 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 27-01-2026 17:30:00 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 27-01-2026 17:30:00 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 27-01-2026 17:30:02 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 27-01-2026 17:30:03 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 27-01-2026 17:30:05 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-01-2026 17:30:07 [main] LogUtils - Click on element By.xpath: //div[@class='d-flex align-items-start']//span[@class='aiz-side-nav-text'][normalize-space()='Manage Profile']
+[INFO] 27-01-2026 17:30:07 [main] LogUtils - Bắt đầu chạy test case: checkElementsDisplay
+[INFO] 27-01-2026 17:30:16 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 27-01-2026 17:30:26 [main] LogUtils - Timeout waiting for the element ClickableBy.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[ERROR] 27-01-2026 17:30:26 [main] LogUtils - Đây là test case FAILED: checkElementsDisplay
+[ERROR] 27-01-2026 17:30:26 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 17:30:26 [main] LogUtils - java.lang.AssertionError: Timeout waiting for the element ClickableBy.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 27-01-2026 17:30:26 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 27-01-2026 17:30:26 [main] LogUtils - Kết thúc bộ test: Tue Jan 27 17:30:26 JST 2026
+[INFO] 27-01-2026 17:30:26 [main] LogUtils - Test total: 1
+[INFO] 27-01-2026 17:30:26 [main] LogUtils - Test PASSED total: 0
+[INFO] 27-01-2026 17:30:26 [main] LogUtils - Test FAILED total: 1
+[INFO] 27-01-2026 17:30:26 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 27-01-2026 17:31:08 [main] LogUtils - Setup môi trường onStart: Tue Jan 27 17:31:03 JST 2026
+[INFO] 27-01-2026 17:31:08 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 27-01-2026 17:31:10 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 27-01-2026 17:31:13 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 27-01-2026 17:31:14 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 27-01-2026 17:31:14 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 27-01-2026 17:31:14 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 27-01-2026 17:31:15 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 27-01-2026 17:31:16 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 27-01-2026 17:31:18 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-01-2026 17:31:21 [main] LogUtils - Click on element By.xpath: //div[@class='d-flex align-items-start']//span[@class='aiz-side-nav-text'][normalize-space()='Manage Profile']
+[INFO] 27-01-2026 17:31:21 [main] LogUtils - Bắt đầu chạy test case: checkElementsDisplay
+[INFO] 27-01-2026 17:31:29 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 27-01-2026 17:31:39 [main] LogUtils - Timeout waiting for the element ClickableBy.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[ERROR] 27-01-2026 17:31:39 [main] LogUtils - Đây là test case FAILED: checkElementsDisplay
+[ERROR] 27-01-2026 17:31:39 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 17:31:39 [main] LogUtils - java.lang.AssertionError: Timeout waiting for the element ClickableBy.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 27-01-2026 17:31:39 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 27-01-2026 17:31:39 [main] LogUtils - Kết thúc bộ test: Tue Jan 27 17:31:39 JST 2026
+[INFO] 27-01-2026 17:31:39 [main] LogUtils - Test total: 1
+[INFO] 27-01-2026 17:31:39 [main] LogUtils - Test PASSED total: 0
+[INFO] 27-01-2026 17:31:39 [main] LogUtils - Test FAILED total: 1
+[INFO] 27-01-2026 17:31:39 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 27-01-2026 17:32:33 [main] LogUtils - Setup môi trường onStart: Tue Jan 27 17:32:28 JST 2026
+[INFO] 27-01-2026 17:32:33 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 27-01-2026 17:32:35 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 27-01-2026 17:32:37 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 27-01-2026 17:32:38 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 27-01-2026 17:32:38 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 27-01-2026 17:32:38 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 27-01-2026 17:32:39 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 27-01-2026 17:32:40 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 27-01-2026 17:32:43 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 27-01-2026 17:32:45 [main] LogUtils - Click on element By.xpath: //div[@class='d-flex align-items-start']//span[@class='aiz-side-nav-text'][normalize-space()='Manage Profile']
+[INFO] 27-01-2026 17:32:45 [main] LogUtils - Bắt đầu chạy test case: checkElementsDisplay
+[INFO] 27-01-2026 17:32:50 [main] LogUtils - Đây là test case PASSED: checkElementsDisplay
+[INFO] 27-01-2026 17:32:50 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 27-01-2026 17:32:50 [main] LogUtils - Kết thúc bộ test: Tue Jan 27 17:32:50 JST 2026
+[INFO] 27-01-2026 17:32:50 [main] LogUtils - Test total: 1
+[INFO] 27-01-2026 17:32:50 [main] LogUtils - Test PASSED total: 1
+[INFO] 27-01-2026 17:32:50 [main] LogUtils - Test FAILED total: 0
+[INFO] 27-01-2026 17:32:50 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 27-01-2026 18:53:49 [main] LogUtils - Setup môi trường onStart: Tue Jan 27 18:53:44 JST 2026
+[INFO] 27-01-2026 18:53:49 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 27-01-2026 18:53:49 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 27-01-2026 18:53:49 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 18:53:49 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 27-01-2026 18:53:49 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 27-01-2026 18:53:49 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 18:53:49 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 27-01-2026 18:53:49 [main] LogUtils - Kết thúc bộ test: Tue Jan 27 18:53:49 JST 2026
+[INFO] 27-01-2026 18:53:49 [main] LogUtils - Test total: 1
+[INFO] 27-01-2026 18:53:49 [main] LogUtils - Test PASSED total: 0
+[INFO] 27-01-2026 18:53:49 [main] LogUtils - Test FAILED total: 0
+[INFO] 27-01-2026 18:53:49 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 27-01-2026 18:55:44 [main] LogUtils - Setup môi trường onStart: Tue Jan 27 18:55:39 JST 2026
+[INFO] 27-01-2026 18:55:45 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[INFO] 27-01-2026 18:55:45 [main] LogUtils - Bắt đầu chạy test case: loginWithInvalidPassword
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - Đây là test case FAILED: loginWithInvalidPassword
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[INFO] 27-01-2026 18:55:45 [main] LogUtils - Bắt đầu chạy test case: loginWithEmailNull
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - Đây là test case FAILED: loginWithEmailNull
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[INFO] 27-01-2026 18:55:45 [main] LogUtils - Bắt đầu chạy test case: loginWithPasswordNull
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - Đây là test case FAILED: loginWithPasswordNull
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 18:55:45 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.getPasswordBorderColor()" because "this.loginPage" is null
+[INFO] 27-01-2026 18:55:45 [main] LogUtils - Kết thúc bộ test: Tue Jan 27 18:55:45 JST 2026
+[INFO] 27-01-2026 18:55:45 [main] LogUtils - Test total: 4
+[INFO] 27-01-2026 18:55:45 [main] LogUtils - Test PASSED total: 0
+[INFO] 27-01-2026 18:55:45 [main] LogUtils - Test FAILED total: 4
+[INFO] 27-01-2026 18:55:45 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 27-01-2026 19:20:47 [main] LogUtils - Setup môi trường onStart: Tue Jan 27 19:20:42 JST 2026
+[INFO] 27-01-2026 19:20:47 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 27-01-2026 19:20:47 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 27-01-2026 19:20:47 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 19:20:47 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 27-01-2026 19:20:47 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 27-01-2026 19:20:47 [main] LogUtils - ==> Status: 2
+[ERROR] 27-01-2026 19:20:47 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 27-01-2026 19:20:47 [main] LogUtils - Kết thúc bộ test: Tue Jan 27 19:20:47 JST 2026
+[INFO] 27-01-2026 19:20:47 [main] LogUtils - Test total: 1
+[INFO] 27-01-2026 19:20:47 [main] LogUtils - Test PASSED total: 0
+[INFO] 27-01-2026 19:20:47 [main] LogUtils - Test FAILED total: 0
+[INFO] 27-01-2026 19:20:47 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 10:51:16 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 10:51:10 JST 2026
+[INFO] 28-01-2026 10:51:16 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 10:51:16 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 10:51:16 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 10:51:16 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 28-01-2026 10:51:16 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 10:51:16 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 10:51:16 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 10:51:16 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 10:51:16 JST 2026
+[INFO] 28-01-2026 10:51:16 [main] LogUtils - Test total: 1
+[INFO] 28-01-2026 10:51:16 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 10:51:16 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 10:51:16 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 11:06:05 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 11:06:00 JST 2026
+[INFO] 28-01-2026 11:06:05 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:06:05 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:06:05 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:06:05 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 28-01-2026 11:06:05 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:06:05 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:06:05 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 11:06:05 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 11:06:05 JST 2026
+[INFO] 28-01-2026 11:06:05 [main] LogUtils - Test total: 1
+[INFO] 28-01-2026 11:06:05 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 11:06:05 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 11:06:05 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 11:16:14 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 11:16:09 JST 2026
+[INFO] 28-01-2026 11:16:14 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:16:15 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:16:15 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:16:15 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 28-01-2026 11:16:15 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:16:15 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:16:15 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 11:16:15 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 11:16:15 JST 2026
+[INFO] 28-01-2026 11:16:15 [main] LogUtils - Test total: 1
+[INFO] 28-01-2026 11:16:15 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 11:16:15 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 11:16:15 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 11:17:54 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 11:17:49 JST 2026
+[INFO] 28-01-2026 11:17:54 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:17:54 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:17:54 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:17:54 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 28-01-2026 11:17:54 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:17:54 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:17:54 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 11:17:54 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 11:17:54 JST 2026
+[INFO] 28-01-2026 11:17:54 [main] LogUtils - Test total: 1
+[INFO] 28-01-2026 11:17:54 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 11:17:54 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 11:17:54 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 11:18:16 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 11:18:10 JST 2026
+[INFO] 28-01-2026 11:18:16 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:18:16 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:18:16 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:18:16 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 28-01-2026 11:18:16 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:18:16 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:18:16 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 11:18:16 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 11:18:16 JST 2026
+[INFO] 28-01-2026 11:18:16 [main] LogUtils - Test total: 1
+[INFO] 28-01-2026 11:18:16 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 11:18:16 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 11:18:16 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 11:20:06 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 11:20:01 JST 2026
+[INFO] 28-01-2026 11:20:06 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:20:06 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:20:06 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:20:06 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 28-01-2026 11:20:06 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:20:06 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:20:06 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 11:20:06 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 11:20:06 JST 2026
+[INFO] 28-01-2026 11:20:06 [main] LogUtils - Test total: 1
+[INFO] 28-01-2026 11:20:06 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 11:20:06 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 11:20:06 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 11:21:50 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 11:21:45 JST 2026
+[INFO] 28-01-2026 11:21:50 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:21:50 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:21:50 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:21:50 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 28-01-2026 11:21:50 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:21:50 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:21:50 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 11:21:50 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 11:21:50 JST 2026
+[INFO] 28-01-2026 11:21:50 [main] LogUtils - Test total: 1
+[INFO] 28-01-2026 11:21:50 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 11:21:50 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 11:21:50 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 11:22:19 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 11:22:13 JST 2026
+[INFO] 28-01-2026 11:22:19 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:22:19 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:22:19 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:22:19 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 28-01-2026 11:22:19 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:22:19 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:22:19 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 11:22:19 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 11:22:19 JST 2026
+[INFO] 28-01-2026 11:22:19 [main] LogUtils - Test total: 1
+[INFO] 28-01-2026 11:22:19 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 11:22:19 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 11:22:19 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 11:23:05 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 11:23:00 JST 2026
+[INFO] 28-01-2026 11:23:05 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:23:05 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:23:05 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:23:05 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[ERROR] 28-01-2026 11:23:05 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 11:23:05 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 11:23:05 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.TakesScreenshot.getScreenshotAs(org.openqa.selenium.OutputType)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 11:23:05 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 11:23:05 JST 2026
+[INFO] 28-01-2026 11:23:05 [main] LogUtils - Test total: 1
+[INFO] 28-01-2026 11:23:05 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 11:23:05 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 11:23:05 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 12:04:13 JST 2026
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[WARN] 28-01-2026 12:04:18 [main] LogUtils - Test case loginWithValidEmailAndPassword is skipped.
+[WARN] 28-01-2026 12:04:18 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Bắt đầu chạy test case: loginWithInvalidPassword
+[WARN] 28-01-2026 12:04:18 [main] LogUtils - Test case loginWithInvalidPassword is skipped.
+[WARN] 28-01-2026 12:04:18 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Bắt đầu chạy test case: loginWithEmailNull
+[WARN] 28-01-2026 12:04:18 [main] LogUtils - Test case loginWithEmailNull is skipped.
+[WARN] 28-01-2026 12:04:18 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Bắt đầu chạy test case: loginWithPasswordNull
+[WARN] 28-01-2026 12:04:18 [main] LogUtils - Test case loginWithPasswordNull is skipped.
+[WARN] 28-01-2026 12:04:18 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 12:04:18 JST 2026
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Test total: 4
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 12:04:18 [main] LogUtils - Test SKIPPED total: 4
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 12:08:00 JST 2026
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[WARN] 28-01-2026 12:08:05 [main] LogUtils - Test case loginWithValidEmailAndPassword is skipped.
+[WARN] 28-01-2026 12:08:05 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Bắt đầu chạy test case: loginWithInvalidPassword
+[WARN] 28-01-2026 12:08:05 [main] LogUtils - Test case loginWithInvalidPassword is skipped.
+[WARN] 28-01-2026 12:08:05 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Bắt đầu chạy test case: loginWithEmailNull
+[WARN] 28-01-2026 12:08:05 [main] LogUtils - Test case loginWithEmailNull is skipped.
+[WARN] 28-01-2026 12:08:05 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Bắt đầu chạy test case: loginWithPasswordNull
+[WARN] 28-01-2026 12:08:05 [main] LogUtils - Test case loginWithPasswordNull is skipped.
+[WARN] 28-01-2026 12:08:05 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "com.core.drivers.DriverManager.getDriver()" is null
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 12:08:05 JST 2026
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Test total: 4
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Test FAILED total: 0
+[INFO] 28-01-2026 12:08:05 [main] LogUtils - Test SKIPPED total: 4
+[INFO] 28-01-2026 12:29:11 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 12:29:05 JST 2026
+[INFO] 28-01-2026 12:29:11 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 28-01-2026 12:29:19 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 28-01-2026 12:29:21 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 28-01-2026 12:29:22 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 28-01-2026 12:29:22 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 28-01-2026 12:29:27 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 28-01-2026 12:29:29 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 28-01-2026 12:29:29 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 28-01-2026 12:29:30 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 28-01-2026 12:29:32 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 28-01-2026 12:29:32 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 28-01-2026 12:29:32 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 28-01-2026 12:29:32 [main] LogUtils - Đây là test case PASSED: loginWithValidEmailAndPassword
+[INFO] 28-01-2026 12:29:32 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 28-01-2026 12:29:33 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 28-01-2026 12:29:43 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 28-01-2026 12:29:44 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 28-01-2026 12:29:44 [main] LogUtils - Bắt đầu chạy test case: loginWithInvalidPassword
+[INFO] 28-01-2026 12:29:49 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 28-01-2026 12:29:50 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 28-01-2026 12:29:50 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 28-01-2026 12:29:51 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 28-01-2026 12:29:54 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 28-01-2026 12:29:54 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[ERROR] 28-01-2026 12:29:54 [main] LogUtils -    ❌ FAILED: Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login).
+[ERROR] 28-01-2026 12:29:54 [main] LogUtils - Đây là test case FAILED: loginWithInvalidPassword
+[ERROR] 28-01-2026 12:29:54 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 12:29:54 [main] LogUtils - java.lang.AssertionError: Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login). expected [true] but found [false]
+[INFO] 28-01-2026 12:29:54 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 28-01-2026 12:29:55 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 28-01-2026 12:29:59 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 28-01-2026 12:30:00 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 28-01-2026 12:30:00 [main] LogUtils - Bắt đầu chạy test case: loginWithEmailNull
+[INFO] 28-01-2026 12:30:05 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 28-01-2026 12:30:06 [main] LogUtils - Set text  on element By.xpath: //input[@id='email']
+[INFO] 28-01-2026 12:30:06 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 28-01-2026 12:30:07 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 28-01-2026 12:30:11 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 28-01-2026 12:30:11 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 28-01-2026 12:30:11 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 28-01-2026 12:30:11 [main] LogUtils - Get text of element By.xpath: //strong[contains(text(),'The email field is required when phone is not pres')]
+[INFO] 28-01-2026 12:30:11 [main] LogUtils - ==> Text: The email field is required when phone is not present.
+[INFO] 28-01-2026 12:30:11 [main] LogUtils - Assert equals: The email field is required when phone is not present. 🟰 The email field is required when phone is not present.
+[INFO] 28-01-2026 12:30:11 [main] LogUtils - Đây là test case PASSED: loginWithEmailNull
+[INFO] 28-01-2026 12:30:11 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 28-01-2026 12:30:12 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 28-01-2026 12:30:19 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 28-01-2026 12:30:21 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 28-01-2026 12:30:21 [main] LogUtils - Bắt đầu chạy test case: loginWithPasswordNull
+[INFO] 28-01-2026 12:30:26 [main] LogUtils - Border color before clicking: #e2e5ec
+[INFO] 28-01-2026 12:30:26 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 28-01-2026 12:30:27 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 28-01-2026 12:30:27 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 28-01-2026 12:30:28 [main] LogUtils - Set text  on element By.xpath: //input[@id='password']
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - Border color after clicking: #dc3545
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 28-01-2026 12:30:30 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - Assert not equals: #dc3545 #️⃣ #e2e5ec
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - Đây là test case PASSED: loginWithPasswordNull
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 12:30:30 JST 2026
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - Test total: 4
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - Test PASSED total: 3
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - Test FAILED total: 1
+[INFO] 28-01-2026 12:30:30 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 28-01-2026 12:35:38 [main] LogUtils - Setup môi trường onStart: Wed Jan 28 12:35:33 JST 2026
+[INFO] 28-01-2026 12:35:38 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 28-01-2026 12:35:40 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 28-01-2026 12:35:40 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 12:35:40 [main] LogUtils - Đây là test case FAILED: loginWithValidEmailAndPassword
+[ERROR] 28-01-2026 12:35:40 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 12:35:40 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[INFO] 28-01-2026 12:35:40 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 28-01-2026 12:35:41 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 28-01-2026 12:35:41 [main] LogUtils - Bắt đầu chạy test case: loginWithInvalidPassword
+[ERROR] 28-01-2026 12:35:41 [main] LogUtils - Đây là test case FAILED: loginWithInvalidPassword
+[ERROR] 28-01-2026 12:35:41 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 12:35:41 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[INFO] 28-01-2026 12:35:43 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 28-01-2026 12:35:43 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 28-01-2026 12:35:43 [main] LogUtils - Bắt đầu chạy test case: loginWithEmailNull
+[ERROR] 28-01-2026 12:35:48 [main] LogUtils - Đây là test case FAILED: loginWithEmailNull
+[ERROR] 28-01-2026 12:35:48 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 12:35:48 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.login(String, String)" because "this.loginPage" is null
+[INFO] 28-01-2026 12:35:49 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 28-01-2026 12:35:50 [main] LogUtils - ✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 28-01-2026 12:35:50 [main] LogUtils - Bắt đầu chạy test case: loginWithPasswordNull
+[ERROR] 28-01-2026 12:35:50 [main] LogUtils - Đây là test case FAILED: loginWithPasswordNull
+[ERROR] 28-01-2026 12:35:50 [main] LogUtils - ==> Status: 2
+[ERROR] 28-01-2026 12:35:50 [main] LogUtils - java.lang.NullPointerException: Cannot invoke "com.hang.pages.user.LoginPage.getPasswordBorderColor()" because "this.loginPage" is null
+[INFO] 28-01-2026 12:35:51 [main] LogUtils - Kết thúc bộ test: Wed Jan 28 12:35:51 JST 2026
+[INFO] 28-01-2026 12:35:51 [main] LogUtils - Test total: 4
+[INFO] 28-01-2026 12:35:51 [main] LogUtils - Test PASSED total: 0
+[INFO] 28-01-2026 12:35:51 [main] LogUtils - Test FAILED total: 4
+[INFO] 28-01-2026 12:35:51 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 02-02-2026 11:30:02 [main] LogUtils - Setup môi trường onStart: Mon Feb 02 11:29:56 JST 2026
+[INFO] 02-02-2026 11:30:02 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 02-02-2026 11:30:12 [main] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 02-02-2026 11:30:14 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 02-02-2026 11:30:15 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 02-02-2026 11:30:15 [main] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 02-02-2026 11:30:20 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:30:22 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:30:22 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:30:23 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:30:25 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 02-02-2026 11:30:25 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 02-02-2026 11:30:25 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 02-02-2026 11:30:25 [main] LogUtils - Đây là test case PASSED: loginWithValidEmailAndPassword
+[INFO] 02-02-2026 11:30:25 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 02-02-2026 11:30:25 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 02-02-2026 11:30:26 [main] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 02-02-2026 11:30:28 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 02-02-2026 11:30:29 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 02-02-2026 11:30:29 [main] LogUtils - Bắt đầu chạy test case: loginWithInvalidPassword
+[INFO] 02-02-2026 11:30:35 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:30:36 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:30:36 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:30:37 [main] LogUtils - Set text Abcd1234sai@ on element By.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:30:39 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 02-02-2026 11:30:39 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 02-02-2026 11:30:39 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 02-02-2026 11:30:39 [main] LogUtils - Get text of element By.xpath: //div[@role='alert']
+[INFO] 02-02-2026 11:30:39 [main] LogUtils - ==> Text: Invalid login credentials
+[INFO] 02-02-2026 11:30:39 [main] LogUtils - Assert equals: Invalid login credentials 🟰 Invalid login credentials
+[INFO] 02-02-2026 11:30:39 [main] LogUtils - Đây là test case PASSED: loginWithInvalidPassword
+[INFO] 02-02-2026 11:30:39 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 02-02-2026 11:30:39 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 02-02-2026 11:30:40 [main] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 02-02-2026 11:30:42 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 02-02-2026 11:30:43 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 02-02-2026 11:30:43 [main] LogUtils - Bắt đầu chạy test case: loginWithInvalidEmail
+[INFO] 02-02-2026 11:30:48 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:30:49 [main] LogUtils - Set text customer123sai@example.com on element By.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:30:49 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:30:51 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:30:53 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 02-02-2026 11:30:53 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 02-02-2026 11:30:53 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 02-02-2026 11:30:53 [main] LogUtils - Get text of element By.xpath: //div[@role='alert']
+[INFO] 02-02-2026 11:30:53 [main] LogUtils - ==> Text: Invalid login credentials
+[INFO] 02-02-2026 11:30:53 [main] LogUtils - Assert equals: Invalid login credentials 🟰 Invalid login credentials
+[INFO] 02-02-2026 11:30:53 [main] LogUtils - Đây là test case PASSED: loginWithInvalidEmail
+[INFO] 02-02-2026 11:30:53 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 02-02-2026 11:30:53 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 02-02-2026 11:30:54 [main] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 02-02-2026 11:30:57 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 02-02-2026 11:30:58 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 02-02-2026 11:30:58 [main] LogUtils - Bắt đầu chạy test case: loginWithEmailNull
+[INFO] 02-02-2026 11:31:03 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:31:04 [main] LogUtils - Set text  on element By.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:31:04 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:31:05 [main] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:31:07 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 02-02-2026 11:31:07 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 02-02-2026 11:31:07 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 02-02-2026 11:31:07 [main] LogUtils - Get text of element By.xpath: //strong[contains(text(),'The email field is required when phone is not pres')]
+[INFO] 02-02-2026 11:31:07 [main] LogUtils - ==> Text: The email field is required when phone is not present.
+[INFO] 02-02-2026 11:31:07 [main] LogUtils - Assert equals: The email field is required when phone is not present. 🟰 The email field is required when phone is not present.
+[INFO] 02-02-2026 11:31:07 [main] LogUtils - Đây là test case PASSED: loginWithEmailNull
+[INFO] 02-02-2026 11:31:07 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 02-02-2026 11:31:07 [main] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 02-02-2026 11:31:08 [main] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 02-02-2026 11:31:11 [main] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 02-02-2026 11:31:12 [main] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 02-02-2026 11:31:12 [main] LogUtils - Bắt đầu chạy test case: loginWithPasswordNull
+[INFO] 02-02-2026 11:31:17 [main] LogUtils - Border color before clicking: #e2e5ec
+[INFO] 02-02-2026 11:31:17 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:31:18 [main] LogUtils - Set text kellytestCMS2@gmail.com	 on element By.xpath: //input[@id='email']
+[INFO] 02-02-2026 11:31:18 [main] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:31:19 [main] LogUtils - Set text  on element By.xpath: //input[@id='password']
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - Border color after clicking: #dc3545
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - 🔍 Checking condition is TRUE: 
+[INFO] 02-02-2026 11:31:21 [main] LogUtils -    ✅ PASSED: Condition is TRUE
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - Assert not equals: #dc3545 #️⃣ #e2e5ec
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - Đây là test case PASSED: loginWithPasswordNull
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - Kết thúc bộ test: Mon Feb 02 11:31:21 JST 2026
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - Test total: 5
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - Test PASSED total: 5
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - Test FAILED total: 0
+[INFO] 02-02-2026 11:31:21 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 11-05-2026 19:17:28 [main] LogUtils - Setup môi trường onStart: Mon May 11 19:17:23 JST 2026
+[INFO] 11-05-2026 19:17:28 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 11-05-2026 19:17:39 [TestNG-test=Login Test with Chrome-1] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 11-05-2026 19:17:42 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 11-05-2026 19:17:43 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 11-05-2026 19:17:43 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithValidEmailAndPassword
+[INFO] 11-05-2026 19:17:48 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:17:49 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS2@gmail.com on element By.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:17:49 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:17:50 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:17:53 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 11-05-2026 19:17:53 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert TRUE | Lỗi: Không tìm thấy trang Dashboard sau khi đăng nhập.
+[INFO] 11-05-2026 19:17:53 [TestNG-test=Login Test with Chrome-1] LogUtils - PASSED: Lỗi: Không tìm thấy trang Dashboard sau khi đăng nhập.
+[INFO] 11-05-2026 19:17:53 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithValidEmailAndPassword
+[INFO] 11-05-2026 19:17:54 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 11-05-2026 19:17:54 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 11-05-2026 19:17:55 [TestNG-test=Login Test with Chrome-1] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 11-05-2026 19:17:57 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 11-05-2026 19:17:58 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 11-05-2026 19:17:58 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithInvalidPassword
+[INFO] 11-05-2026 19:18:03 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:18:04 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS2@gmail.com on element By.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:18:04 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:18:05 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234sai@ on element By.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:18:07 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 11-05-2026 19:18:07 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert TRUE | Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login).
+[INFO] 11-05-2026 19:18:07 [TestNG-test=Login Test with Chrome-1] LogUtils - PASSED: Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login).
+[INFO] 11-05-2026 19:18:07 [TestNG-test=Login Test with Chrome-1] LogUtils - Get text of element By.xpath: //div[@role='alert']
+[INFO] 11-05-2026 19:18:07 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Text: Invalid login credentials
+[INFO] 11-05-2026 19:18:07 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert equals | actual=Invalid login credentials | expected=Invalid login credentials
+[INFO] 11-05-2026 19:18:07 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithInvalidPassword
+[INFO] 11-05-2026 19:18:07 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 11-05-2026 19:18:07 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 11-05-2026 19:18:08 [TestNG-test=Login Test with Chrome-1] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 11-05-2026 19:18:10 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 11-05-2026 19:18:11 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 11-05-2026 19:18:11 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithInvalidEmail
+[INFO] 11-05-2026 19:18:16 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:18:18 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text customer123sai@example.com on element By.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:18:18 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:18:19 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:18:21 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 11-05-2026 19:18:21 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert TRUE | Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login).
+[INFO] 11-05-2026 19:18:21 [TestNG-test=Login Test with Chrome-1] LogUtils - PASSED: Lỗi: User đã bị chuyển trang (đáng lẽ phải ở lại trang Login).
+[INFO] 11-05-2026 19:18:21 [TestNG-test=Login Test with Chrome-1] LogUtils - Get text of element By.xpath: //div[@role='alert']
+[INFO] 11-05-2026 19:18:21 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Text: Invalid login credentials
+[INFO] 11-05-2026 19:18:21 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert equals | actual=Invalid login credentials | expected=Invalid login credentials
+[INFO] 11-05-2026 19:18:21 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithInvalidEmail
+[INFO] 11-05-2026 19:18:21 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 11-05-2026 19:18:21 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 11-05-2026 19:18:22 [TestNG-test=Login Test with Chrome-1] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 11-05-2026 19:18:24 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 11-05-2026 19:18:25 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 11-05-2026 19:18:25 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithEmailNull
+[INFO] 11-05-2026 19:18:30 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:18:31 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text  on element By.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:18:31 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:18:33 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:18:34 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 11-05-2026 19:18:34 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert TRUE | Lỗi: User đã bị chuyển trang khi để trống Email.
+[INFO] 11-05-2026 19:18:34 [TestNG-test=Login Test with Chrome-1] LogUtils - PASSED: Lỗi: User đã bị chuyển trang khi để trống Email.
+[INFO] 11-05-2026 19:18:34 [TestNG-test=Login Test with Chrome-1] LogUtils - Get text of element By.xpath: //strong[contains(text(),'The email field is required when phone is not pres')]
+[INFO] 11-05-2026 19:18:34 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Text: The email field is required when phone is not present.
+[INFO] 11-05-2026 19:18:34 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert equals | actual=The email field is required when phone is not present. | expected=The email field is required when phone is not present.
+[INFO] 11-05-2026 19:18:34 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithEmailNull
+[INFO] 11-05-2026 19:18:34 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 11-05-2026 19:18:34 [TestNG-test=Login Test with Chrome-1] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 11-05-2026 19:18:35 [TestNG-test=Login Test with Chrome-1] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 11-05-2026 19:18:37 [TestNG-test=Login Test with Chrome-1] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 11-05-2026 19:18:38 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 11-05-2026 19:18:38 [TestNG-test=Login Test with Chrome-1] LogUtils - Bắt đầu chạy test case: loginWithPasswordNull
+[INFO] 11-05-2026 19:18:43 [TestNG-test=Login Test with Chrome-1] LogUtils - Border color before clicking: #e2e5ec
+[INFO] 11-05-2026 19:18:43 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:18:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text kellytestCMS2@gmail.com on element By.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:18:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:18:46 [TestNG-test=Login Test with Chrome-1] LogUtils - Set text  on element By.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:18:48 [TestNG-test=Login Test with Chrome-1] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 11-05-2026 19:18:48 [TestNG-test=Login Test with Chrome-1] LogUtils - Border color after clicking: #dc3545
+[INFO] 11-05-2026 19:18:48 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert TRUE | Lỗi: Lỗi: User đã bị chuyển trang khi để trống Password
+[INFO] 11-05-2026 19:18:48 [TestNG-test=Login Test with Chrome-1] LogUtils - PASSED: Lỗi: Lỗi: User đã bị chuyển trang khi để trống Password
+[INFO] 11-05-2026 19:18:48 [TestNG-test=Login Test with Chrome-1] LogUtils - Assert not equals: #dc3545 #️⃣ #e2e5ec
+[INFO] 11-05-2026 19:18:48 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case PASSED: loginWithPasswordNull
+[INFO] 11-05-2026 19:18:48 [TestNG-test=Login Test with Chrome-1] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 11-05-2026 19:18:48 [main] LogUtils - Kết thúc bộ test: Mon May 11 19:18:48 JST 2026
+[INFO] 11-05-2026 19:18:48 [main] LogUtils - Test total: 5
+[INFO] 11-05-2026 19:18:48 [main] LogUtils - Test PASSED total: 5
+[INFO] 11-05-2026 19:18:48 [main] LogUtils - Test FAILED total: 0
+[INFO] 11-05-2026 19:18:48 [main] LogUtils - Test SKIPPED total: 0
+[INFO] 11-05-2026 19:19:45 [main] LogUtils - Setup môi trường onStart: Mon May 11 19:19:39 JST 2026
+[ERROR] 11-05-2026 19:19:45 [TestNG-test=Login Test with Chrome-1] LogUtils - Đây là test case FAILED: searchAndSelectProduct
+[ERROR] 11-05-2026 19:19:45 [TestNG-test=Login Test with Chrome-1] LogUtils - ==> Status: 2
+[ERROR] 11-05-2026 19:19:45 [TestNG-test=Login Test with Chrome-1] LogUtils - org.testng.TestNGException: 
+Cannot inject @Test annotated Method [searchAndSelectProduct] with [class java.lang.String, class java.lang.String].
+For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
+[INFO] 11-05-2026 19:19:45 [TestNG-test=Login Test with Chrome-2] LogUtils - 🚀 Đang chạy Chrome ở chế độ HEADLESS
+[INFO] 11-05-2026 19:19:47 [TestNG-test=Login Test with Chrome-2] LogUtils - 🌐 Khởi chạy trình duyệt Chrome (đã tắt password popup)
+[INFO] 11-05-2026 19:19:50 [TestNG-test=Login Test with Chrome-2] LogUtils - Open URL: https://cms.anhtester.com/users/login
+[INFO] 11-05-2026 19:19:51 [TestNG-test=Login Test with Chrome-2] LogUtils - Click on element By.xpath: //div[@class='modal-content position-relative border-0 rounded-0']/button[@data-value='removed']
+[INFO] 11-05-2026 19:19:51 [TestNG-test=Login Test with Chrome-2] LogUtils - Clear text on elementBy.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:19:51 [TestNG-test=Login Test with Chrome-2] LogUtils - Clear text on elementBy.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:19:52 [TestNG-test=Login Test with Chrome-2] LogUtils - Set text kellytestCMS2@gmail.com on element By.xpath: //input[@id='email']
+[INFO] 11-05-2026 19:19:53 [TestNG-test=Login Test with Chrome-2] LogUtils - Set text Abcd1234@ on element By.xpath: //input[@id='password']
+[INFO] 11-05-2026 19:19:55 [TestNG-test=Login Test with Chrome-2] LogUtils - Click on element By.xpath: //button[normalize-space()='Login']
+[INFO] 11-05-2026 19:19:55 [TestNG-test=Login Test with Chrome-2] LogUtils - Bắt đầu chạy test case: crawlProductDetailIntoExcel
+[INFO] 11-05-2026 19:20:00 [TestNG-test=Login Test with Chrome-2] LogUtils - Clear text on elementBy.xpath: //input[@name='keyword']
+[INFO] 11-05-2026 19:20:02 [TestNG-test=Login Test with Chrome-2] LogUtils - Set text Dell on element By.xpath: //input[@name='keyword']
+[INFO] 11-05-2026 19:20:04 [TestNG-test=Login Test with Chrome-2] LogUtils - Click on element By.xpath: //div[@class='input-group-append d-none d-lg-block']//button[@type='submit']
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - Click on element By.xpath: (//img[@alt='Dell'])[last()]
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - Get text of element By.xpath: //h1
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - ==> Text: Dell
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - Get text of element By.xpath: //span[@id='available-quantity']
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - ==> Text: 0
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - Get text of element By.xpath: //div[normalize-space()='Price:']/following-sibling::div
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - ==> Text: $100,000,000.00 /eg
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - Get text of element By.xpath: //small[contains(text(), 'Sold by:')]/parent::div
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - ==> Text: Sold by:
+Inhouse product
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - Get text of element By.xpath: //div[@id='tab_default_1']
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - ==> Text: dell g15
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - Assert NOT NULL | Kiểm tra mảng dữ liệu sản phẩm trả về không bị Null
+[INFO] 11-05-2026 19:20:11 [TestNG-test=Login Test with Chrome-2] LogUtils - PASSED: Kiểm tra mảng dữ liệu sản phẩm trả về không bị Null
+[INFO] 11-05-2026 19:20:12 [TestNG-test=Login Test with Chrome-2] LogUtils - Assert TRUE | Kiểm tra dữ liệu đã lưu thành công vào Excel
+[INFO] 11-05-2026 19:20:12 [TestNG-test=Login Test with Chrome-2] LogUtils - PASSED: Kiểm tra dữ liệu đã lưu thành công vào Excel
+[INFO] 11-05-2026 19:20:12 [TestNG-test=Login Test with Chrome-2] LogUtils - Đây là test case PASSED: crawlProductDetailIntoExcel
+[INFO] 11-05-2026 19:20:22 [TestNG-test=Login Test with Chrome-2] LogUtils - 🔻 Đã đóng trình duyệt và cleanup driver
+[INFO] 11-05-2026 19:20:22 [main] LogUtils - Kết thúc bộ test: Mon May 11 19:20:22 JST 2026
+[INFO] 11-05-2026 19:20:22 [main] LogUtils - Test total: 1
+[INFO] 11-05-2026 19:20:22 [main] LogUtils - Test PASSED total: 1
+[INFO] 11-05-2026 19:20:22 [main] LogUtils - Test FAILED total: 0
+[INFO] 11-05-2026 19:20:22 [main] LogUtils - Test SKIPPED total: 0

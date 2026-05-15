@@ -1,0 +1,1 @@
+{"uuid":"1843c5df-fcf3-49aa-9c1a-6aae65b1623e","name":"Suite Product Test","children":["3a4fb238-7dcf-436f-86e9-b740a32bd623"],"befores":[{"name":"setupEnvironment","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1778494779909,"stop":1778494779923}],"afters":[],"start":1778494779898,"stop":1778494822327}

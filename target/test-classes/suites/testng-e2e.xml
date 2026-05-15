@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite E2E Flow Test" verbose="1">
+
+
+    <test name="E2E Flow with Chrome">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class
+                    name="com.hang.testcases.user.E2EFlowTest">
+            </class>
+        </classes>
+    </test>
+
+</suite>

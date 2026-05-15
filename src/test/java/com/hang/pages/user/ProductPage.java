@@ -82,10 +82,10 @@ public class ProductPage extends BasePage {
     }
 
     @Step("Increase quantity from Modal to: {0}")
-    public void increaseQuantityFromModal(int targetQuatity) {
-        if (targetQuatity > 1) {
+    public void increaseQuantityFromModal(int targetQuantity) {
+        if (targetQuantity > 1) {
             WebUI.waitForElementVisible(increaseQuantityBtn);
-            for (int i = 1; i < targetQuatity; i++) {
+            for (int i = 1; i < targetQuantity; i++) {
                 WebUI.clickElement(increaseQuantityBtn);
             }
         }
@@ -111,7 +111,7 @@ public class ProductPage extends BasePage {
     public boolean setDataProductIntoExcel(String name, String available, String originalPrice, String soldBy, String description, int row) {
         try {
             ExcelHelper excelHelper = new ExcelHelper();
-            excelHelper.setExcelFile("src/test/resources/datatest/Product Detail.xlsx", "Product detail");
+            excelHelper.setExcelFile("src/test/resources/testdata/product-detail.xlsx", "Product detail");
             excelHelper.setCellData(name, 0, row);
             excelHelper.setCellData(available, 1, row);
             excelHelper.setCellData(originalPrice, 2, row);

@@ -2,6 +2,7 @@ package com.hang.flows;
 
 
 import com.core.keywords.WebUI;
+import com.core.utils.LogUtils;
 import com.hang.models.ProductModel;
 import com.hang.pages.user.CartPage;
 import com.hang.pages.user.ProductPage;
@@ -22,14 +23,14 @@ public class CommonFlow {
             String name = product.getProductName();
             int quantity = product.getQuantity();
 
-            System.out.println("--- Adding: " + name + "---");
+            LogUtils.info("Adding product to cart: " + name);
 
             productPage.openProductModal(name);
 
             //Lấy original price của mỗi Product ghi vào Model
             double originalPrice = productPage.getSelectedProductPrice(name);
             product.setRecordedPrice(originalPrice);
-            System.out.println(">> Đã ghi nhận giá sản phẩm ['" + name + "'] là: " + originalPrice);
+            LogUtils.info("Recorded product price. Name=" + name + " | price=" + originalPrice);
 
             productPage.increaseQuantityFromModal(quantity);
 

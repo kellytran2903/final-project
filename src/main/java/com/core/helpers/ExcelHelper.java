@@ -1,5 +1,6 @@
 package com.core.helpers;
 
+import com.core.utils.LogUtils;
 import java.awt.Color;
 import java.io.File;
 import java.io.FileInputStream;
@@ -7,14 +8,10 @@ import java.io.FileOutputStream;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.commons.math3.analysis.function.Abs;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import java.io.FileInputStream;
 
 public class ExcelHelper {
 
@@ -34,7 +31,7 @@ public class ExcelHelper {
             File f = new File(ExcelPath);
 
             if (!f.exists()) {
-                System.out.println("File doesn't exist.");
+                LogUtils.warn("Excel file does not exist: " + ExcelPath);
             }
 
             fis = new FileInputStream(ExcelPath);
@@ -53,7 +50,7 @@ public class ExcelHelper {
             });
 
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            LogUtils.error("Failed to open Excel file. Path=" + ExcelPath + " | sheet=" + SheetName + " | error=" + e.getMessage());
         }
     }
 
@@ -172,8 +169,7 @@ public class ExcelHelper {
             //
             int noOfRows = sh.getPhysicalNumberOfRows();
             int noOfCols = row.getLastCellNum();
-
-            System.out.println(noOfRows + " - " + noOfCols);
+            LogUtils.info("Excel data provider. rows=" + noOfRows + " | cols=" + noOfCols);
 
             Cell cell;
             data = new Object[noOfRows - 1][noOfCols];
@@ -201,7 +197,7 @@ public class ExcelHelper {
                 }
             }
         } catch (Exception e) {
-            System.out.println("The exception is:" + e.getMessage());
+            LogUtils.error("Excel data provider failed: " + e.getMessage());
             throw new RuntimeException(e);
         }
         return data;
@@ -253,7 +249,7 @@ public class ExcelHelper {
     public void saveRowData(String[] dataRow) {
         try {
             if (sh == null) {
-                System.out.println("Sheet chưa được khởi tạo, hãy gọi setExcelFile trước!");
+                LogUtils.warn("Sheet is not initialized. Call setExcelFile() first.");
                 return;
             }
 
@@ -290,17 +286,17 @@ public class ExcelHelper {
             fileOut.flush();
             fileOut.close();
 
-            System.out.println("✅ Đã ghi dữ liệu vào Excel tại dòng: " + newRowIndex);
+            LogUtils.info("Wrote Excel row. RowIndex=" + newRowIndex);
 
         } catch (Exception e) {
-            System.out.println("❌ Lỗi ghi file Excel: " + e.getMessage());
+            LogUtils.error("Failed to write Excel row: " + e.getMessage());
         }
     }
 
     // Để Test Case biết vòng lặp chạy bao nhiêu lần
     public int getRowCount() {
         if (sh == null) {
-            System.out.println("⚠️ Sheet chưa được khởi tạo.");
+            LogUtils.warn("Sheet is not initialized. Call setExcelFile() first.");
             return 0;
         }
         return sh.getLastRowNum();

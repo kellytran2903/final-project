@@ -22,10 +22,6 @@ public class DashboardPageAdmin {
         Assert.assertTrue(WebUI.isElementDisplayed(menuDashboard), "❌Dashboard page is not displayed");
     }
 
-    public void DashboardPage(){
-        verifyDashboardPageLoaded();
-    }
-
     @Step("Open All Orders")
     public void openAllOrders(){
         WebUI.waitForPageLoaded();

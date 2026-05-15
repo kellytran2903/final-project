@@ -24,7 +24,7 @@ public class BaseTest {
     }
 
     @Step("Khởi chạy trình duyệt {0}")
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void createDriver(@Optional("chrome") String browser) {
         WebDriver driver;
 
@@ -33,6 +33,16 @@ public class BaseTest {
             browser = PropertiesHelper.getValue("BROWSER");
         }
 
+        // Mặc định là false nếu không có trong file config
+//        boolean headless = Boolean.parseBoolean(PropertiesHelper.getValue("HEADLESS"));
+        // Logic: Ưu tiên lấy từ câu lệnh Maven (-DHEADLESS=true), nếu không có mới lấy từ file config
+        String headlessConfig = System.getProperty("HEADLESS");
+        if (headlessConfig == null) {
+            headlessConfig = PropertiesHelper.getValue("HEADLESS");
+        }
+        boolean headless = Boolean.parseBoolean(headlessConfig);
+
+        //CÁCH 1:
         switch (browser.toLowerCase()) {
             case "chrome":
                 ChromeOptions options = new ChromeOptions();
@@ -43,21 +53,35 @@ public class BaseTest {
                 prefs.put("profile.password_manager_enabled", false); // Tắt Save password prompt
                 prefs.put("autofill.profile_enabled", false); // Tắt autofill form
                 prefs.put("autofill.credit_card_enabled", false);
-
                 options.setExperimentalOption("prefs", prefs);
+
                 options.addArguments("--disable-save-password-bubble");
                 options.addArguments("--disable-notifications");
                 options.addArguments("--disable-popup-blocking");
                 options.addArguments("--disable-extensions");
-                options.addArguments("--start-maximized");
+//                options.addArguments("--start-maximized");
                 options.addArguments("--disable-infobars");
+                options.addArguments("--remote-allow-origins=*"); // Fix lỗi connection bản Chrome mới
+
+                // ⚙️ CẤU HÌNH HEADLESS
+                if (headless) {
+                    options.addArguments("--headless=new"); // Chế độ Headless mới nhất (Chrome 109+)
+                    options.addArguments("--window-size=1920,1080"); // ⚠️ QUAN TRỌNG: Phải set size cứng khi headless
+                    LogUtils.info("🚀 Đang chạy Chrome ở chế độ HEADLESS");
+                } else {
+                    options.addArguments("--start-maximized"); // Chỉ maximize khi có giao diện
+                }
 
                 driver = new ChromeDriver(options);
-                LogUtils.info("✅ Khởi chạy trình duyệt Chrome (đã tắt password popup)");
+                LogUtils.info("\uD83C\uDF10 Khởi chạy trình duyệt Chrome (đã tắt password popup)");
                 break;
 
             case "safari":
+                // Safari ít hỗ trợ headless qua config đơn giản, thường chạy UI thực
                 driver = new SafariDriver();
+                if (headless) {
+                    LogUtils.warn("⚠️ Safari không hỗ trợ chế độ Headless qua Selenium config thông thường.");
+                }
                 LogUtils.info("Khởi chạy trình duyệt Safari");
                 break;
 
@@ -69,18 +93,44 @@ public class BaseTest {
 
         // Lưu WebDriver vào ThreadLocal
         DriverManager.setDriver(driver);
-        DriverManager.getDriver().manage().window().maximize();
+        if (!headless) {
+            DriverManager.getDriver().manage().window().maximize();
+        }
         DriverManager.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
     }
 
     @AfterMethod
     @Step("Close driver")
+//    public void closeDriver() {
+//        try {
+//            CaptureHelper.stopRecord();
+//        } catch (Exception e) {
+//            LogUtils.warn("⚠️ Không thể stop record: " + e.getMessage());
+//        }
+//
+//        if (DriverManager.getDriver() != null) {
+//            DriverManager.quit();
+//            LogUtils.info("🔻 Đã đóng trình duyệt và cleanup driver");
+//        }
+//    }
+
+    //CÁCH 2: CHẠY HEADLESS TRÊN GIT ACTIONS (không capture/ record)
     public void closeDriver() {
-        try {
-            CaptureHelper.stopRecord();
-        } catch (Exception e) {
-            LogUtils.warn("⚠️ Không thể stop record: " + e.getMessage());
+        // 👇 SỬA ĐOẠN NÀY 👇
+        String headless = System.getProperty("HEADLESS");
+        if (headless == null) {
+            headless = PropertiesHelper.getValue("HEADLESS");
         }
+
+        // Chỉ dừng quay nếu không phải headless
+        if ("false".equalsIgnoreCase(headless)) {
+            try {
+                CaptureHelper.stopRecord();
+            } catch (Exception e) {
+                LogUtils.warn("⚠️ Không thể stop record: " + e.getMessage());
+            }
+        }
+        // 👆 ---------------- 👇
 
         if (DriverManager.getDriver() != null) {
             DriverManager.quit();

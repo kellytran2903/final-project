@@ -1,6 +1,7 @@
 package com.hang.pages.user;
 
 import com.core.keywords.WebUI;
+import com.core.utils.LogUtils;
 import com.hang.common.BasePage;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
@@ -52,7 +53,7 @@ public class CartPage extends BasePage {
     public int getCartTotalBadge() {
         WebUI.scrollToElement(countCartBadge);
         String totalString = getElementText(countCartBadge);
-        System.out.println("Get total product badge: " + totalString);
+        LogUtils.info("Cart badge total: " + totalString);
         return Integer.parseInt(totalString);
     }
 
@@ -69,7 +70,7 @@ public class CartPage extends BasePage {
 
         if (totalItems == 0) return;
         openCartList();
-        while (WebUI.checkElementExist(removeButton)) {
+        while (WebUI.isElementPresent(removeButton)) {
             try {
                 WebUI.clickElement(removeButton);
                 WebUI.waitForPageLoaded();
@@ -84,7 +85,7 @@ public class CartPage extends BasePage {
     public boolean checkProductInCart(String product) {
         String dynamicXpath = String.format("//div[contains(@class,'dropdown-menu')]//*[normalize-space()='%s']", product);
         By productElement = By.xpath(dynamicXpath);
-        return WebUI.checkElementExist(productElement);
+        return WebUI.isElementPresent(productElement);
     }
 
     @Step("Open Shipping info (from Checkout button")
@@ -98,7 +99,7 @@ public class CartPage extends BasePage {
     }
 
     @Step("Click on Continue to Shipping button in My Cart tab")
-    public void clickOnContitnueToShippingButton(){
+    public void clickContinueToShippingButton() {
         WebUI.clickElement(continueToShippingButton);
     }
 
@@ -174,16 +175,16 @@ public class CartPage extends BasePage {
         String dynamicXpathNameProduct = String.format("//span[@class='fs-14 opacity-60'][contains(normalize-space(),'%s')]", productName);
         String dynamicXpathPrice = String.format("(//span[@class='fs-14 opacity-60'][contains(normalize-space(),'%s')]//parent::div//following-sibling::div/span[@class='fw-600 fs-16'])[1]", productName);
         String dynamicXpathTax = String.format("(//span[@class='fs-14 opacity-60'][contains(normalize-space(),'%s')]//parent::div//following-sibling::div/span[@class='fw-600 fs-16'])[2]", productName);
-        String dynamicXpathQuatity = String.format("//span[@class='fs-14 opacity-60'][contains(normalize-space(),'%s')]//parent::div//following-sibling::div/div/input", productName);
+        String dynamicXpathQuantity = String.format("//span[@class='fs-14 opacity-60'][contains(normalize-space(),'%s')]//parent::div//following-sibling::div/div/input", productName);
         String dynamicXpathTotalPriceEachProduct = String.format("(//span[@class='fs-14 opacity-60'][contains(normalize-space(),'%s')]//parent::div//following-sibling::div/span)[last()]", productName);
 
         By nameProduct = By.xpath(dynamicXpathNameProduct);
         By priceProduct = By.xpath(dynamicXpathPrice);
         By taxProduct = By.xpath(dynamicXpathTax);
-        By quantityProduct = By.xpath(dynamicXpathQuatity);
+        By quantityProduct = By.xpath(dynamicXpathQuantity);
         By totalPriceEachProduct = By.xpath(dynamicXpathTotalPriceEachProduct);
 
-        Assert.assertTrue(WebUI.checkElementExist(nameProduct), "❌ Không tìm thấy SP: " + productName);
+        Assert.assertTrue(WebUI.isElementPresent(nameProduct), "Product was not found in cart: " + productName);
 
         double uiNetPriceEachProduct = parsePrice(WebUI.getElementText(priceProduct));
         double uiTaxEachProduct = parsePrice(WebUI.getElementText(taxProduct));
@@ -192,11 +193,11 @@ public class CartPage extends BasePage {
 
         double uiGrossPriceEachProduct = uiNetPriceEachProduct + uiTaxEachProduct;
 
-        System.out.println("ℹ️ Checking Price for " + productName);
-        System.out.println("   + Modal Price (Expected): " + expectedProductPriceFromModal);
-        System.out.println("   + UI Net Price: " + uiNetPriceEachProduct);
-        System.out.println("   + UI Tax: " + uiTaxEachProduct);
-        System.out.println("   -> UI Gross Price (Net + Tax): " + uiGrossPriceEachProduct);
+        LogUtils.info("Checking price for product: " + productName);
+        LogUtils.info("Modal price (expected): " + expectedProductPriceFromModal);
+        LogUtils.info("UI net price: " + uiNetPriceEachProduct);
+        LogUtils.info("UI tax: " + uiTaxEachProduct);
+        LogUtils.info("UI gross price (net+tax): " + uiGrossPriceEachProduct);
 
         Assert.assertEquals(uiQuantityEachProduct, expectedQuantity, "❌ Số lượng sản phẩm sai!");
         Assert.assertEquals(uiGrossPriceEachProduct, expectedProductPriceFromModal, "❌ Giá đơn vị (bao gồm thuế) không khớp!");

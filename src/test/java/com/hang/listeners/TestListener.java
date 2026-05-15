@@ -39,9 +39,32 @@ public class TestListener implements ITestListener {
         LogUtils.info("Test SKIPPED total: " + test_skipped_total);
     }
 
+//    @Override
+//    public void onTestStart(ITestResult result) {
+//        CaptureHelper.startRecord(result.getName());
+//        LogUtils.info("Bắt đầu chạy test case: " + result.getName());
+//        test_total++;
+//    }
+
+    //CHẠY HEADLESS TRÊN GIT ACTIONS (không cần capture/ record)
     @Override
     public void onTestStart(ITestResult result) {
-        CaptureHelper.startRecord(result.getName());
+        // 🔥 CHANGE HERE: Thêm logic kiểm tra Headless trước khi start record
+        String headless = System.getProperty("HEADLESS");
+        if (headless == null) {
+            headless = PropertiesHelper.getValue("HEADLESS");
+        }
+
+        // Chỉ quay video nếu HEADLESS = false (Tức là chạy có giao diện ở local)
+        if ("false".equalsIgnoreCase(headless)) {
+            try {
+                CaptureHelper.startRecord(result.getName());
+            } catch (Exception e) {
+                // Dùng try-catch để nếu lỗi quay video thì test vẫn chạy tiếp, không bị fail oan
+                LogUtils.warn("⚠️ Không thể start record video: " + e.getMessage());
+            }
+        }
+
         LogUtils.info("Bắt đầu chạy test case: " + result.getName());
         test_total++;
     }

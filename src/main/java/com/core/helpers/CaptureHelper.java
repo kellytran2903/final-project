@@ -1,6 +1,7 @@
 package com.core.helpers;
 
 import com.core.drivers.DriverManager;
+import com.core.utils.LogUtils;
 import org.monte.media.Format;
 import org.monte.media.Registry;
 import org.monte.media.math.Rational;
@@ -101,10 +102,10 @@ public class CaptureHelper extends ScreenRecorder {
             }
             // Truyền biến "screenName" gán cho tên File chụp màn hình để đặt tên
             FileHandler.copy(source, new File(SystemHelper.getCurrentDir() + PropertiesHelper.getValue("SCREENSHOT_PATH") + File.separator + screenshotName + "_" + dateFormat.format(new Date()) + ".png"));
-            System.out.println("Screenshot taken: " + screenshotName);
-            System.out.println("Screenshot taken current URL: " + DriverManager.getDriver().getCurrentUrl());
+            LogUtils.info("Screenshot captured. Name=" + screenshotName);
+            LogUtils.info("Current URL: " + DriverManager.getDriver().getCurrentUrl());
         } catch (Exception e) {
-            System.out.println("Exception while taking screenshot: " + e.getMessage());
+            LogUtils.error("Capture screenshot failed: " + e.getMessage());
         }
     }
 }

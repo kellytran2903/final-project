@@ -12,6 +12,11 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+<!--        Thêm properties để tránh lỗi null khi chạy Local (còn config plugin phía dưới thì để nhận biến)-->
+        <suiteTestFile>testng-login.xml</suiteTestFile>
+
+        <groups></groups>
     </properties>
 
     <dependencies>
@@ -26,7 +31,7 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.23.0</version>
+            <version>4.40.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
@@ -96,7 +101,7 @@
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-            <version>2.30.0</version>
+            <version>2.31.0</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-attachments -->
@@ -133,19 +138,22 @@
                     <configuration>
                         <suiteXmlFiles>
                             <!-- Call Suite name -->
-                            <suiteXmlFile>src/test/resources/Suite/SuiteLoginTest.xml</suiteXmlFile>
-                            <suiteXmlFile>src/test/resources/Suite/SuiteProfileTest.xml</suiteXmlFile>
-                            <suiteXmlFile>src/test/resources/Suite/SuiteProductTest.xml</suiteXmlFile>
-                            <suiteXmlFile>src/test/resources/Suite/SuiteCartTest.xml</suiteXmlFile>
-                            <suiteXmlFile>src/test/resources/Suite/SuiteE2EFlowTest.xml</suiteXmlFile>
+                            <suiteXmlFile>src/test/resources/suites/${suiteTestFile}</suiteXmlFile>
+<!--                            <suiteXmlFile>src/test/resources/suites/testng-login.xml</suiteXmlFile>-->
+<!--                            <suiteXmlFile>src/test/resources/suites/testng-profile.xml</suiteXmlFile>-->
+<!--                            <suiteXmlFile>src/test/resources/suites/testng-product.xml</suiteXmlFile>-->
+<!--                            <suiteXmlFile>src/test/resources/suites/testng-cart.xml</suiteXmlFile>-->
+<!--                            <suiteXmlFile>src/test/resources/suites/testng-e2e.xml</suiteXmlFile>-->
                         </suiteXmlFiles>
                         <argLine>
                             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar"
                         </argLine>
-                        <testFailureIgnore>true</testFailureIgnore>
+                        <testFailureIgnore>false</testFailureIgnore>
                         <systemPropertyVariables>
                             <!--Đường dẫn xuất ra report-->
                             <allure.results.directory>target/allure-results</allure.results.directory>
+                            <HEADLESS>${HEADLESS}</HEADLESS>
+                            <BROWSER>${BROWSER}</BROWSER>
                         </systemPropertyVariables>
                     </configuration>
                 </plugin>

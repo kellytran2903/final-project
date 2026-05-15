@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test All Suites" verbose="1">
+
+    <listeners>
+        <listener class-name="com.hang.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Run All Smoke Tests">
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+
+        <packages>
+            <package name="com.hang.testcases.*"/>
+        </packages>
+    </test>
+</suite>

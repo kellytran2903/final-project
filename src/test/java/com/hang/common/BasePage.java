@@ -23,4 +23,23 @@ public class BasePage {
         WebUI.clickElement(menuManageProfile);
         return new ProfilePage();
     }
+
+//    public ProfilePage clickManageProfile() {
+//        System.out.println("DEBUG: Bắt đầu clickManageProfile..."); // Dòng 1
+//
+//        WebUI.waitForElementClickable(menuManageProfile);
+//        WebUI.clickElement(menuManageProfile);
+//
+//        System.out.println("DEBUG: Click xong, chuẩn bị return ProfilePage..."); // Dòng 2
+//
+//        ProfilePage page = new ProfilePage();
+//
+//        if (page == null) {
+//            System.out.println("DEBUG: Ôi trời ơi, page bị null!"); // Dòng 3 (Không thể xảy ra)
+//        } else {
+//            System.out.println("DEBUG: Page đã được khởi tạo thành công!");
+//        }
+//
+//        return page;
+//    }
 }

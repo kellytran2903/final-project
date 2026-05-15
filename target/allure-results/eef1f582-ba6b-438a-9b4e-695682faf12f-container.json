@@ -1,0 +1,1 @@
+{"uuid":"eef1f582-ba6b-438a-9b4e-695682faf12f","name":"Suite Login Test","children":["6d5e7050-bbc0-4e5d-b675-d89b1058153b"],"befores":[{"name":"setupEnvironment","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1778494643460,"stop":1778494643473}],"afters":[],"start":1778494643448,"stop":1778494728691}
